@@ -1,0 +1,70 @@
+dArquitectura CSS
+Es una metodología que se enfoca en la estructura de un proyecto. La práctica.
+
+Objetivos:
+La organización del código y carpetas junto a una metodología de clases para que el trabajo en equipo esté estandarizado.
+
+Debe ser:
+1. Predecible: Sus reglas hacen lo que se espera. Añadir o actualizar una regla no tiene repercusiones inesperadas.
+
+2. Reutilizable: Las reglas son abstractas y están desacopladas. Así se podran crear nuevos componentes de forma mas rapida y sencilla.
+
+3. Mantenible: Es la capacidad de realizar cambios en la CSS sin necesidad de refactorizar el código existente.
+
+4. Escalable: significa que a medida que las CSS aumentan de tamaño, siguen siendo fáciles de mantener.
+
+Tipos de metodología:
+- OOCSS
+- SMACSS
+- BEM (usada)
+- ITCSS
+- ACSS(Atomic Design) (usada)
+
+Metodología BEM, usa __ --
+https://en.bem.info/methodology/
+BLOQUE, ELEMENTO, MODIFICADOR
+Es una convención de nomenclatura popular para clases en HTML y CSS.
+La idea detrás de esto es dividir la interfaz de usuario en bloques independientes.
+Esto hace que el desarrollo de la interfaz  sea rápido y fácil, incluso con una interfaz de usuario compleja, permite crear componentes de interfaz extendibles y reutilizables. 
+
+BLOQUE-
+Un componente de pagina funcionalmente independiente que se puede reutilizar. En HTML se representan por el class atributo.
+Este bloque debe considerarse como un padre.
+<div class = "card>
+
+</div>
+
+ELEMENTO-
+Una parte compuesta de un bloque que no se puede usar por separado.
+<div class = "card>
+    <input class= "contacto__input">
+    <button class= "contacto__button">Enviar</button>
+</div>
+
+MODIFICADOR-
+Una entidad que define la apriencia, el estado o el comportamiento de un bloque o elemento.
+<div class = "card>
+    <input class= "contacto__input">
+    <button class= "contacto__button">Enviar</button>
+    <button class= "contacto__button--cancelacion">Cancelar</button>  ****modificador***
+</div>
+
+
+ATOMIC DESIGN--Arquitectura--organizacion de archivos
+https://bradfrost.com/blog/post/atomic-web-design/
+Es una metodología para crear sistemas de diselo atómico.
+Hay 5 niveles:
+- Átomos
+- Moléculas
+- Organismos
+- Template
+- Páginas
+
+Esto quiere decir que cada seccion lleva un css.
+ index.html
+ sección cabecera o navbar
+    cabecera.css
+    menu
+        menu-lista.css
+        menu-link.css
+        menu-item.css
